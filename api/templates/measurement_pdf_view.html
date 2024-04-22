@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Pdf</title>
+    <style>
+         table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+        }
+        .measurements table{
+          width: 100%;
+
+        }
+        
+        td,  th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding:5px
+        }
+        .measurements td{
+            padding:8px
+        }
+        </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="width:300px"><img src="{% static 'images/pdf-img.png' %}" height="100%" alt="img"></div>
+        <div>
+            <table style="width:300px">
+                <tr><th>Chest</th><td>A</td></tr>
+                <tr><th>Waist</th><td>B</td></tr>
+                <tr><th>Hips</th><td>C</td></tr>
+                <tr><th>Back Width</th><td>D</td></tr>
+                <tr><th>Front Chest</th><td>E</td></tr>
+                <tr><th>Shoulder</th><td>F</td></tr>
+                <tr><th>Neck Size</th><td>G</td></tr>
+                <tr><th>Sleeve</th><td>H</td></tr>
+                <tr><th>Shoulder to Waist</th><td>G-B</td></tr>
+                <tr><th>Waist to Hip</th><td>B-C</td></tr>
+                <tr><th>Outside Leg</th><td>K-M</td></tr>
+                <tr><th>Inside Leg</th><td>L-M</td></tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="measurements">
+        <h5>Measurement Points of the body</h5>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>type</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>cm</td>
+                <td>{{ measure_ins.height }}</td>
+            </tr>
+            <tr>
+                <td>Chest</td>
+                <td>cm</td>
+                <td>{{ measure_ins.chest }}</td>
+            </tr>
+            <tr>
+                <td>Waist</td>
+                <td>cm</td>
+                <td>{{ measure_ins.waist }}</td>
+            </tr>
+            <tr>
+                <td>Hip</td>
+                <td>cm</td>
+                <td>{{ measure_ins.hip }}</td>
+            </tr>
+            <tr>
+                <td>Back Width</td>
+                <td>cm</td>
+                <td>{{ measure_ins.back_width }}</td>
+            </tr>
+            <tr>
+                <td>Front Chest</td>
+                <td>cm</td>
+                <td>{{ measure_ins.front_chest }}</td>
+            </tr>
+            <tr>
+                <td>Shoulder</td>
+                <td>cm</td>
+                <td>{{ measure_ins.shoulder }}</td>
+            </tr>
+            <tr>
+                <td>Neck Size</td>
+                <td>cm</td>
+                <td>{{ measure_ins.neck }}</td>
+            </tr>
+            <tr>
+                <td>Sleeve</td>
+                <td>cm</td>
+                <td>{{ measure_ins.sleeve }}</td>
+            </tr>
+            <tr>
+                <td>Shoulder to Waist</td>
+                <td>cm</td>
+                <td>{{ measure_ins.shoulder_to_waist }}</td>
+            </tr>
+            <tr>
+                <td>Waist to Hip</td>
+                <td>cm</td>
+                <td>{{ measure_ins.waist_to_hip }}</td>
+            </tr>
+            <tr>
+                <td>Outside Leg</td>
+                <td>cm</td>
+                <td>{{ measure_ins.outside_leg }}</td>
+            </tr>
+            <tr>
+                <td>Inside Leg</td>
+                <td>cm</td>
+                <td>{{ measure_ins.inside_leg }}</td>
+            </tr>
+        </table>
+        
+    </div>
+</body>
+</html>
